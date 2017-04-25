@@ -1,0 +1,37 @@
+.cf:before,
+.cf:after
+  content: " "
+  display: table
+
+.cf:after
+  clear: both
+
+.cf
+  *zoom: 1
+
+.container
+  margin: 0 auto
+  max-width: 1040px
+  padding: 0 20px
+  position: relative
+  width: 100%
+
+  .col
+    float: left
+    position: relative
+    width: 33.333333%
+
+.container--full
+  position: relative
+  width: 100%
+
+  .col
+    float: left
+    height: 500px
+    width: 33.333333%
+
+    @media(max-width: 1000px)
+      width: 50%
+
+    @media(max-width: 667px)
+      width: 100%

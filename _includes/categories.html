@@ -1,0 +1,12 @@
+<section class="categories">
+  <div class="container--full cf">
+    {% for category in site.data.categories %}
+    <div class="col">
+      <div id="{{ category.id }}" class="category">
+        <span class="categories__title">{{ category.name }}</span>
+        <a class="btn categories__link" href="{{ category.link }}">See more</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

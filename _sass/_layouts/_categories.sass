@@ -1,0 +1,71 @@
+.categories
+  background: white
+  position: relative
+
+  &__title
+    color: white
+    display: inline-block
+    font:
+      size: 55px
+      weight: 900
+    left: 50%
+    position: relative
+    text-transform: uppercase
+    text-align: center
+    top: 50%
+    transform: translate(-50%, -50%)
+    transition: all .25s
+
+    &--hovered
+      transform: translate(-50%, -150%)
+
+  &__link
+    left: 50%
+    opacity: 0
+    position: absolute
+    top: 66%
+    transition: all .25s
+
+    &--hovered
+      opacity: 1
+
+.category
+  height: 100%
+  position: relative
+  width: 100%
+
+#vehicle
+  background: linear-gradient(rgba(227,138,126,0.75), rgba(227,138,126,0.75)), url('../img/vehicle.jpg')
+    position: center
+    repeat: no-repeat
+    size: cover
+
+#building
+  background: linear-gradient(rgba(114,128,210,0.75), rgba(114,128,210,0.75)), url('../img/building.jpg')
+    position: center
+    repeat: no-repeat
+    size: cover
+
+#bulletin
+  background: linear-gradient(rgba(136,203,199,0.75), rgba(136,203,199,0.75)), url('../img/bulletin.jpg')
+    position: center
+    repeat: no-repeat
+    size: cover
+
+#sports
+  background: linear-gradient(rgba(59,62,71,0.75), rgba(59,62,71,0.75)), url('../img/sports.jpg')
+    position: center
+    repeat: no-repeat
+    size: cover
+
+#prop
+  background: linear-gradient(rgba(94,185,222,0.75), rgba(94,185,222,0.75)), url('../img/props.jpg')
+    position: center
+    repeat: no-repeat
+    size: cover
+
+#day-night
+  background: linear-gradient(rgba(181,77,77,0.75), rgba(181,77,77,0.75)), url('../img/daynight.jpg')
+    position: center
+    repeat: no-repeat
+    size: cover
