@@ -1,4 +1,8 @@
+---
+---
 (($) => {
+  const message = 'hello';
+  console.log(message);
   const $window = $(window);
   const $hero = $('#hero');
 
