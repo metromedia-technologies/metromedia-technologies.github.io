@@ -180,32 +180,15 @@
 </section>
 
 <section class="clients">
-  <div class="container--full cf">
-    <div class="col">
-    </div>
-    <div class="col">
-    </div>
-    <div class="col">
-
-    </div>
-    <div class="col">
-
-    </div>
-    <div class="col">
-
-    </div>
-    <div class="col">
-
-    </div>
-    <div class="col">
-
-    </div>
-    <div class="col">
-
-    </div>
-    <div class="col">
-      
-    </div>
+  <div class="container">
+    <ul>
+      <li><img src="assets/img/placeholder-logo.svg" alt=""></li>
+      <li><img src="assets/img/placeholder-logo.svg" alt=""></li>
+      <li><img src="assets/img/placeholder-logo.svg" alt=""></li>
+      <li><img src="assets/img/placeholder-logo.svg" alt=""></li>
+      <li><img src="assets/img/placeholder-logo.svg" alt=""></li>
+      <li><img src="assets/img/placeholder-logo.svg" alt=""></li>
+    </ul>
   </div>
 </section>
 
@@ -235,15 +218,23 @@
 </section>
 
 <footer class="page__footer">
-  <div class="office-image"></div>
+  <div class="office-image">
+    <div id="office-nyc" class="office-image__img office-image__img--active"></div>
+    <div id="office-la" class="office-image__img"></div>
+    <div id="office-wooster" class="office-image__img"></div>
+  </div>
   <div class="container">
     <section class="contact">
       <h1 class="contact__heading">Get in Touch</h1>
-      <a class="contact__office active" href="#">new york</a>
-      <a class="contact__office" href="#">los angeles</a>
-      <a class="contact__office" href="#">wooster</a>
+      <a id="nyc-btn" class="contact__office active" href="#">new york</a>
+      <a id="la-btn" class="contact__office" href="#">los angeles</a>
+      <a id="wooster-btn" class="contact__office" href="#">wooster</a>
       <span class="contact__phone">1.800.999.4668</span>
-      <span class="contact__address">810 7th Avenue, 29th Floor<br />New York, NY 10019</span>
+      <div class="contact__address-container">
+        <span id="nyc-address" class="contact__address contact__address--active">810 7th Avenue, 29th Floor<br />New York, NY 10019</span>
+        <span id="la-address" class="contact__address">370 Amapola Avenue, Suite 200<br />Torrance, Ca. 90501</span>
+        <span id="wooster-address" class="contact__address">1061 Venture Blvd<br />Wooser, OH 44691</span>
+      </div>
       <a class="contact__email" href="mailto:info@mmt.com">info@mmt.com</a>
       <div class="social">
         <a class="social__link" href="#">
@@ -273,6 +264,7 @@
 
 <script src="./assets/js/scroll.js" charset="utf-8"></script>
 <script src="./assets/js/mobile_menu.js" charset="utf-8"></script>
+<script src="./assets/js/footer.js" charset="utf-8"></script>
 
   </body>
 </html>
