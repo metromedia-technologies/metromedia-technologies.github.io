@@ -1,0 +1,32 @@
+<svg x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.play__circle {
+	  animation: pulseSmall 3s ease-in-out infinite;
+	}
+	.play__arrow {
+	  animation: pulselarge 3s ease-in-out infinite;
+	}
+	@keyframes pulseSmall {
+	  0%{transform: scale(1, 1);}
+	  80% {transform: scale(1, 1);}
+	  85% {transform: scale(.8, .8);}
+	  90% {transform: scale(1.2, 1.2);}
+	  95% {transform: scale(.8, .8);}
+	  100% {transform: scale(1, 1);}
+	}
+	@keyframes pulseLarge {
+	  0%{transform: scale(1, 1);}
+	  80% {transform: scale(1, 1);}
+	  85% {transform: scale(2, 2);}
+	  90% {transform: scale(.5, .5);}
+	  95% {transform: scale(2, 2);}
+	  100% {transform: scale(1, 1);}
+	}
+</style>
+<g>
+	<circle fill="white" class="play__circle" cx="30" cy="30" r="30"/>
+	<!-- <path fill="white" class="play__circle" d="M30,2c15.4,0,28,12.6,28,28S45.4,58,30,58S2,45.4,2,30S14.6,2,30,2 M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30
+		s30-13.4,30-30S46.6,0,30,0L30,0z"/> -->
+</g>
+<polygon fill="white" class="play__arrow" points="21.9,18 21.9,42.7 44.9,30.3 "/>
+</svg>
