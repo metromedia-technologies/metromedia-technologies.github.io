@@ -480,7 +480,7 @@ section {
       transform: translateY(-50%);
       width: 150px; }
   .hero__cover-photo {
-    background: linear-gradient(-45deg, rgba(59, 62, 71, 0.9), rgba(59, 62, 71, 0.7)), url("/assets/4.jpg");
+    background: linear-gradient(-45deg, rgba(59, 62, 71, 0.9), rgba(59, 62, 71, 0.7)), url("./4.jpg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -600,37 +600,37 @@ section {
   width: 100%; }
 
 #vehicle {
-  background: linear-gradient(rgba(227, 138, 126, 0.75), rgba(227, 138, 126, 0.75)), url("/assets/vehicle.jpg");
+  background: linear-gradient(rgba(227, 138, 126, 0.75), rgba(227, 138, 126, 0.75)), url("./vehicle.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
 
 #building {
-  background: linear-gradient(rgba(114, 128, 210, 0.75), rgba(114, 128, 210, 0.75)), url("/assets/building.jpg");
+  background: linear-gradient(rgba(114, 128, 210, 0.75), rgba(114, 128, 210, 0.75)), url("./building.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
 
 #bulletin {
-  background: linear-gradient(rgba(136, 203, 199, 0.75), rgba(136, 203, 199, 0.75)), url("/assets/bulletin.jpg");
+  background: linear-gradient(rgba(136, 203, 199, 0.75), rgba(136, 203, 199, 0.75)), url("./bulletin.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
 
 #sports {
-  background: linear-gradient(rgba(59, 62, 71, 0.75), rgba(59, 62, 71, 0.75)), url("/assets/sports.jpg");
+  background: linear-gradient(rgba(59, 62, 71, 0.75), rgba(59, 62, 71, 0.75)), url("./sports.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
 
 #prop {
-  background: linear-gradient(rgba(94, 185, 222, 0.75), rgba(94, 185, 222, 0.75)), url("/assets/props.jpg");
+  background: linear-gradient(rgba(94, 185, 222, 0.75), rgba(94, 185, 222, 0.75)), url("./props.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
 
 #day-night {
-  background: linear-gradient(rgba(181, 77, 77, 0.75), rgba(181, 77, 77, 0.75)), url("/assets/daynight.jpg");
+  background: linear-gradient(rgba(181, 77, 77, 0.75), rgba(181, 77, 77, 0.75)), url("./daynight.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -802,19 +802,19 @@ section {
       transform: translateX(0); }
 
 #office-nyc {
-  background-image: url("/assets/nyc-office.jpg");
+  background-image: url("./nyc-office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
 
 #office-la {
-  background-image: url("/assets/la-office.jpg");
+  background-image: url("./la-office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
 
 #office-wooster {
-  background-image: url("/assets/wooster-office.png");
+  background-image: url("./wooster-office.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
