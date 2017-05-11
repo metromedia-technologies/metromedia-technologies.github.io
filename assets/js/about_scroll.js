@@ -25,8 +25,20 @@
   $(window).resize(function () {
     if ($(window).width() <= 809) {
       $dotYear.css('display', 'inline-block');
+
+      if ($dotYear.offset().top >= $event1.offset().top - 70 && $dotYear.offset().top <= $event2.offset().top - 140 && year != 1987) {
+        dateChange(1987);
+      } else if ($dotYear.offset().top >= $event2.offset().top - 140 && year != 1995) {
+        dateChange(1995);
+      }
     } else if ($(window).width() > 809) {
       $dotYear.css('display', 'none');
+
+      if ($date.offset().top >= $event1.offset().top - 70 && $year.offset().top <= $event2.offset().top - 75 && year != 1987) {
+        dateChange(1987);
+      } else if ($date.offset().top >= $event2.offset().top - 65 && year != 1995) {
+        dateChange(1995);
+      }
     }
   });
 
@@ -39,20 +51,18 @@
       $body.eq(1).addClass('about--showing');
     }
 
-    console.log($year.offset().top, $event2.offset().top);
-
-    if ($date.offset().top >= $event1.offset().top - 70 && $year.offset().top <= $event2.offset().top - 75 && year != 1987) {
-      dateChange(1987);
-    }
-    if ($dotYear.offset().top >= $event1.offset().top - 70 && $dotYear.offset().top <= $event2.offset().top - 140 && year != 1987) {
-      dateChange(1987);
-    }
-
-    if ($date.offset().top >= $event2.offset().top - 65 && year != 1995) {
-      dateChange(1995);
-    }
-    if ($dotYear.offset().top >= $event2.offset().top - 140 && year != 1995) {
-      dateChange(1995);
+    if ($(window).width() <= 809) {
+      if ($dotYear.offset().top >= $event1.offset().top - 70 && $dotYear.offset().top <= $event2.offset().top - 140 && year != 1987) {
+        dateChange(1987);
+      } else if ($dotYear.offset().top >= $event2.offset().top - 140 && year != 1995) {
+        dateChange(1995);
+      }
+    } else {
+      if ($date.offset().top >= $event1.offset().top - 70 && $year.offset().top <= $event2.offset().top - 75 && year != 1987) {
+        dateChange(1987);
+      } else if ($date.offset().top >= $event2.offset().top - 65 && year != 1995) {
+        dateChange(1995);
+      }
     }
   });
 
