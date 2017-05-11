@@ -39,14 +39,16 @@
       $body.eq(1).addClass('about--showing');
     }
 
-    if ($year.offset().top >= $event1.offset().top - 70 && $year.offset().top <= $event2.offset().top - 70 && year != 1987) {
+    console.log($year.offset().top, $event2.offset().top);
+
+    if ($date.offset().top >= $event1.offset().top - 70 && $year.offset().top <= $event2.offset().top - 75 && year != 1987) {
       dateChange(1987);
     }
     if ($dotYear.offset().top >= $event1.offset().top - 70 && $dotYear.offset().top <= $event2.offset().top - 140 && year != 1987) {
       dateChange(1987);
     }
 
-    if ($year.offset().top >= $event2.offset().top - 70 && year != 1995) {
+    if ($date.offset().top >= $event2.offset().top - 65 && year != 1995) {
       dateChange(1995);
     }
     if ($dotYear.offset().top >= $event2.offset().top - 140 && year != 1995) {
