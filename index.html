@@ -340,7 +340,7 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
-$('.video-play-btn').click(() => {
+$('.video-play-btn').click(function() {
   if (player.getPlayerState() !== 1) {
     $('.headline__lockup').addClass('hide-headline');
     $('.hero__cover-photo').addClass('hide-cover-img');
