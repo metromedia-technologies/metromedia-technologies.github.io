@@ -330,7 +330,7 @@ function onYouTubeIframeAPIReady() {
         controls: 0,
         rel: 0,
         modestbranding: 1,
-        videoId: 'OObRT3RcUnw',
+        videoId: 'lcO36aS2GeM',
         playerVars: {
             color: 'white'
         },
@@ -345,6 +345,7 @@ $('.video-play-btn').click(() => {
     $('.headline__lockup').addClass('hide-headline');
     $('.hero__cover-photo').addClass('hide-cover-img');
     $('.media-controls').removeClass('hide-media-controls');
+    player.setVolume(33);
     player.playVideo();
   } else {
     player.pauseVideo();
