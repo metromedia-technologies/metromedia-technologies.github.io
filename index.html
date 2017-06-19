@@ -112,22 +112,19 @@
       </div>
     </div>
   </div>
-  <video class="hero__video-bg" id="video" preload="metadata">
+  <!-- <video class="hero__video-bg" id="video" preload="metadata">
     <source src="https://metromedia-technologies.github.io/assets/video/hero-vid.mp4" type="video/mp4"/>
-  </video>
-  <!-- <div class="video-background">
+  </video> -->
+  <div class="video-background">
     <div class="video-foreground">
-      <iframe id="video" src="https://www.youtube.com/embed/Wc5FbjaJmDM?controls=0&showinfo=0&rel=0&autoplay=0&loop=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+      <div id="video-placeholder"></div>
     </div>
-  </div> -->
+  </div>
 </section>
 
 <section class="intro">
   <div class="media-controls hide-media-controls">
-    <img id="pause" class="media-btn" src="https://metromedia-technologies.github.io/assets/img/pause-circle.svg" alt="pause">
-    <img id="play" class="media-btn hide-media-btn" src="https://metromedia-technologies.github.io/assets/img/play-circle.svg" alt="play">
     <img id="volume" class="media-btn" src="https://metromedia-technologies.github.io/assets/img/volume-2.svg" alt="volume on">
-    <img id="mute" class="media-btn hide-media-btn" src="https://metromedia-technologies.github.io/assets/img/volume-x.svg" alt="mute">
   </div>
   <div class="container">
     <h1 class="intro__title">what we do</h1>
@@ -323,6 +320,64 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous">
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+var player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-placeholder', {
+        controls: 0,
+        rel: 0,
+        modestbranding: 1,
+        videoId: 'OObRT3RcUnw',
+        playerVars: {
+            color: 'white'
+        },
+        events: {
+          onStateChange: onPlayerStateChange
+        }
+    });
+}
+
+$('.video-play-btn').click(() => {
+  if (player.getPlayerState() !== 1) {
+    $('.headline__lockup').addClass('hide-headline');
+    $('.hero__cover-photo').addClass('hide-cover-img');
+    $('.media-controls').removeClass('hide-media-controls');
+    player.playVideo();
+  } else {
+    player.pauseVideo();
+  }
+});
+
+function setSoundBtn() {
+  if(player.isMuted()){
+      player.unMute();
+      $('.media-btn').attr('src','/assets/img/volume-2.svg');
+  }
+  else{
+      player.mute();
+      $('.media-btn').attr('src','/assets/img/volume-x.svg');
+  }
+}
+
+$('.media-btn').on('click', setSoundBtn);
+
+function onPlayerStateChange(event) {
+    if(event.data === 0) {
+      $('.headline__lockup').removeClass('hide-headline');
+      $('.hero__cover-photo').removeClass('hide-cover-img');
+      $('.media-controls').addClass('hide-media-controls');
+    } else if(event.data === 1) {
+      if(player.isMuted()){
+          $('.media-btn').attr('src','/assets/img/volume-x.svg');
+      }
+      else{
+          $('.media-btn').attr('src','/assets/img/volume-2.svg');
+      }
+    }
+}
 </script>
 <script src="assets/js/p1.entry.chunk.js"></script>
 
